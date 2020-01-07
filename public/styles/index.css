@@ -4,7 +4,7 @@ html {
   margin: 0;
 }
 .bg {
-  background-image: url("https://findyourbook-2020.herokuapp.com/booksignup.jpg");
+  background-image: url("https://findyourbook-2020.herokuapp.com/assets/booksignup.jpg");
   height: 100%;
   width: 100%;
   background-position: center;

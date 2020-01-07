@@ -7,7 +7,7 @@ html {
   margin: 0;
 }
 .bg {
-  background-image: url("https://findyourbook-2020.herokuapp.com/booklogin.jpg");
+  background-image: url("https://findyourbook-2020.herokuapp.com/assets/booklogin.jpg");
   height: 100%;
   width: 100%;
   background-position: center;
