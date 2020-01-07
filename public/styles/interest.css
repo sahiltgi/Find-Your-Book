@@ -7,7 +7,7 @@ html {
   margin: 0;
 }
 .back {
-  background-image: url("../assets/search.jpg");
+  background-image: url("https://findyourbook-2020.herokuapp.com/search.jpg");
   height: 100%;
   width: 100%;
   background-position: center;

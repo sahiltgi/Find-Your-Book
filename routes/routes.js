@@ -1,4 +1,3 @@
-const ObjectID = require("mongodb").ObjectID;
 const AUTHENTICATION = "authenticate-user";
 const RATING = "rating-books";
 
@@ -101,15 +100,35 @@ module.exports = function(app, db) {
   });
 
   /*------------------------------------------------Ratings-------------------------------------------------- */
-  // app.put("/api/rating/:userId", (request, response) => {
-  //   const body = request.body;
-  //   let Rating = body.Rating;
-  //   let Book = body.Book;
-  //   if (body) {
-  //     const rateBook = db.collection(RATING);
-  //     rateBook.insertOne({ Rating: Rating }, { Book: Book });
-  //   }
-  // });
+  app.put("/api/rating", (request, response) => {
+    const body = request.body;
+    if (body && body.rating && body.book) {
+      const rateBook = db.collection(RATING);
+      rateBook
+        .insert({
+          rating: body.rating,
+          book: body.book
+        })
+        .then(result => {
+          response.send({
+            status: "success",
+            message: "Ratings given Successfully"
+          });
+          console.log(result);
+        })
+        .catch(err => {
+          response.status(400).send({
+            status: "error",
+            message: err
+          });
+        });
+    } else {
+      response.status(400).send({
+        status: "error",
+        message: "ratings cannot be empty"
+      });
+    }
+  });
 
   // app.get("/api/rating/:userId?", (request, response) => {
   //   const collection = db.collection(RATING);

@@ -24,7 +24,7 @@ async function registration() {
     if (res.status == 200) {
       //console.log('Success:', JSON.stringify(myJson));
       console.log("the status is " + res.status);
-      window.location = "./views/login.html";
+      window.location = "https://findyourbook-2020.herokuapp.com/login.html";
     } else {
       console.log("the status is " + res.status);
       alert("Please Check for the Values Entered");
@@ -54,7 +54,7 @@ async function login() {
     if (res.status == 200) {
       //console.log('Success:', JSON.stringify(myJson));
       console.log("the status is " + res.status);
-      window.location = "./interest.html";
+      window.location = "https://findyourbook-2020.herokuapp.com/interest.html";
     } else {
       console.log("the status is " + res.status);
       alert("Check you password");
