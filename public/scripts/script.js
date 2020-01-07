@@ -1,4 +1,5 @@
-const hostUrl = "https://localhost:3000/";
+const hostUrl = "https://findyourbook-2020.herokuapp.com/";
+// const hostUrl = "https://localhost:3000/";
 async function registration() {
   try {
     let username = document.getElementById("username").value;
