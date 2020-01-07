@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="./scripts/index.css" />
+    <title>Find Your Book</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a
+        class="navbar-brand"
+        href="#"
+        style="font-family: Arial, Helvetica, sans-serif;"
+        ><strong>FIND YOUR BOOK</strong></a
+      >
+    </nav>
+    <div class="bg">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <div class="panel-group" style="padding-top: 12px;">
+            <div class="panel panel-primary">
+              <div class="panel-heading"><h3>Register Here</h3></div>
+              <div class="panel-body">
+                <form action="" method="POST">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="User Name"
+                      class="form-control"
+                      id="username"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      class="form-control"
+                      id="email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      placeholder="Enter Password"
+                      class="form-control"
+                      id="password"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      placeholder="Enter Password Confirmation"
+                      class="form-control"
+                      id="passwordconf"
+                    />
+                  </div>
+                  <div class="checkbox">
+                    <label
+                      ><input
+                        type="checkbox"
+                        onchange="document.getElementById('register_button').disabled = !this.checked;"
+                      />
+                      I agree to all the terms and conditions.</label
+                    >
+                  </div>
+                  <button
+                    type="button"
+                    id="register_button"
+                    onclick="registration();"
+                    disabled="true"
+                    class="btn btn-outline-success my-2 my-sm-0"
+                  >
+                    SignUp
+                  </button>
+                </form>
+                <p>
+                  Already have an account. <a href="login.html">Login here!</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+  </body>
+</html>

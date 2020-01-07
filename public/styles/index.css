@@ -1,0 +1,26 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+.bg {
+  background-image: url("../assets/booksignup.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+.panel {
+  margin-top: 80px;
+}

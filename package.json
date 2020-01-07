@@ -1,0 +1,20 @@
+{
+  "name": "findyourbook",
+  "version": "1.0.0",
+  "description": "an application to suggest books based on different inputs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "\"sahil tyagi\"",
+  "license": "ISC",
+  "dependencies": {
+    "client-sessions": "^0.8.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

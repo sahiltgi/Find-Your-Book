@@ -1,0 +1,114 @@
+<!-- <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Feedback</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <footer></footer>
+        </div>
+        <div class="col-sm-8" style="background-color:pink;">
+          <span class="rating">
+            <span class="star">★</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Star Rating System</title>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      .star {
+        color: goldenrod;
+        font-size: 2rem;
+        padding: 0 1rem; /* space out the stars */
+      }
+      .star::before {
+        content: "\2606"; /* star outline */
+        cursor: pointer;
+      }
+      .star.rated::before {
+        /* the style for a selected star */
+        content: "\2605"; /* filled star */
+      }
+
+      .stars {
+        counter-reset: rateme 0;
+        font-size: 2rem;
+        font-weight: 900;
+      }
+      .star.rated {
+        counter-increment: rateme 1;
+      }
+      .stars::after {
+        content: counter(rateme) "/5";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- alternate codepen version https://codepen.io/mad-d/pen/aJMPWr?editors=0010 -->
+    <h1>Star Rating System</h1>
+    <div class="stars" data-rating="1">
+      <span class="star">&nbsp;</span>
+      <span class="star">&nbsp;</span>
+      <span class="star">&nbsp;</span>
+      <span class="star">&nbsp;</span>
+      <span class="star">&nbsp;</span>
+    </div>
+    <p>The number shown after the CSS is generated with a CSS counter.</p>
+
+    <script>
+      //initial setup
+      document.addEventListener("DOMContentLoaded", function() {
+        let stars = document.querySelectorAll(".star");
+        stars.forEach(function(star) {
+          star.addEventListener("click", setRating);
+        });
+
+        let rating = parseInt(
+          document.querySelector(".stars").getAttribute("data-rating")
+        );
+        let target = stars[rating - 1];
+        target.dispatchEvent(new MouseEvent("click"));
+      });
+      function setRating(ev) {
+        let span = ev.currentTarget;
+        let stars = document.querySelectorAll(".star");
+        let match = false;
+        let num = 0;
+        stars.forEach(function(star, index) {
+          if (match) {
+            star.classList.remove("rated");
+          } else {
+            star.classList.add("rated");
+          }
+          //are we currently looking at the span that was clicked
+          if (star === span) {
+            match = true;
+            num = index + 1;
+          }
+        });
+        document.querySelector(".stars").setAttribute("data-rating", num);
+      }
+    </script>
+  </body>
+</html>

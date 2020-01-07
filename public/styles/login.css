@@ -1,0 +1,25 @@
+.mt-0 {
+  margin-top: 20 !important;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+.bg {
+  background-image: url("../assets/booklogin.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.btn-outline-success {
+  position: relative;
+  z-index: 1;
+}
