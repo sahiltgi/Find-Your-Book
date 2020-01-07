@@ -14,7 +14,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.navbar {
+/* .navbar {
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -22,4 +22,4 @@ html {
 .btn-outline-success {
   position: relative;
   z-index: 1;
-}
+} */
