@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(middleware.preventCROS);
 
 app.get("/", (request, response) => {
-  response.sendFile(__dirname + "index.html");
+  response.sendFile(__dirname + "/index.html");
 });
 
 console.log("connecting to database...");
@@ -39,7 +39,7 @@ mongodb.MongoClient.connect(DB_URI, (error, dbClient) => {
   console.log("Successfully connected to Database");
   const database = dbClient.db("authentication");
   routes(app, database);
-  app.listen(PORT, () => {
-    console.log(`Server started at ${PORT}`);
+  app.listen(port, () => {
+    console.log(`Server started at ${port}`);
   });
 });
