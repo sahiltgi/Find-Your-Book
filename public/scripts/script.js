@@ -24,7 +24,7 @@ async function registration() {
     if (res.status == 200) {
       //console.log('Success:', JSON.stringify(myJson));
       console.log("the status is " + res.status);
-      window.location = "login.html";
+      window.location = "./views/login.html";
     } else {
       console.log("the status is " + res.status);
       alert("Please Check for the Values Entered");
@@ -54,7 +54,7 @@ async function login() {
     if (res.status == 200) {
       //console.log('Success:', JSON.stringify(myJson));
       console.log("the status is " + res.status);
-      window.location = "./views/interest.html";
+      window.location = "./interest.html";
     } else {
       console.log("the status is " + res.status);
       alert("Check you password");
