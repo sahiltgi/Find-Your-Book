@@ -55,7 +55,8 @@ async function login() {
     if (res.status == 200) {
       //console.log('Success:', JSON.stringify(myJson));
       console.log("the status is " + res.status);
-      window.location = "https://findyourbook-2020.herokuapp.com";
+      window.location =
+        "https://findyourbook-2020.herokuapp.com/views/interest.html";
     } else {
       console.log("the status is " + res.status);
       alert("Check you password");
