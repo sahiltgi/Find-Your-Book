@@ -100,7 +100,7 @@ module.exports = function(app, db) {
   });
 
   /*------------------------------------------------Ratings-------------------------------------------------- */
-  app.put("/api/rating", (request, response) => {
+  app.post("/api/ratings", (request, response) => {
     const body = request.body;
     if (body && body.rating && body.book) {
       const rateBook = db.collection(RATING);
