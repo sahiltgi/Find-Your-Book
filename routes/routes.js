@@ -102,12 +102,13 @@ module.exports = function(app, db) {
   /*------------------------------------------------Ratings-------------------------------------------------- */
   app.post("/api/ratings", (request, response) => {
     const body = request.body;
-    if (body && body.rating && body.book) {
+    if (body && body.rating && body.book && body.author) {
       const rateBook = db.collection(RATING);
       rateBook
         .insert({
-          rating: body.rating,
-          book: body.book
+          author: body.author,
+          book: body.book,
+          rating: body.rating
         })
         .then(result => {
           response.send({
@@ -125,7 +126,7 @@ module.exports = function(app, db) {
     } else {
       response.status(400).send({
         status: "error",
-        message: "ratings cannot be empty"
+        message: "check for the fields"
       });
     }
   });

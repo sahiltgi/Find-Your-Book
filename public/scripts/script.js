@@ -86,6 +86,12 @@ function find() {
     url + apikey + "&" + "q=" + author + "&" + "q=" + book,
     true
   );
+  // xmlhttp.headers("Access-Control-Allow-Origin", "*");
+  // xmlhttp.headers("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
+  // xmlhttp.headers(
+  //   "Access-Control-Allow-Headers",
+  //   "Origin, X-Requested-With, Content-Type, Accept"
+  // );
   xmlhttp.send();
 }
 
