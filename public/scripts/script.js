@@ -120,7 +120,7 @@ function myFunction(xml) {
   document.getElementById("result").innerHTML = table;
 }
 
-function clickeve() {
+function openModal() {
   var modal = document.getElementById("Book-Rating-modal");
 
   var btn = document.getElementById("Rate-Book");
