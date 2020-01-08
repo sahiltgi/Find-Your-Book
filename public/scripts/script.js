@@ -112,7 +112,7 @@ function myFunction(xml) {
       x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
       "' height='100px' width='70px'>" +
       "</td><td>" +
-      "<button type='button' id='Rate-Book'>" +
+      "<button type='button' id='Rate-Book' onclick='openModal()'>" +
       "Ratings" +
       "</button>" +
       "</td></tr>";
