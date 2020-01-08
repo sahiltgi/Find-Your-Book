@@ -98,7 +98,8 @@ function find() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  var table = "<tr><th>Title</th><th>Author</th><th>Cover Page</th></tr>";
+  var table =
+    "<tr><th>Title</th><th>Author</th><th>Cover Page</th><th>Ratings</th></tr>";
   var x = xmlDoc.getElementsByTagName("best_book");
   for (i = 0; i < x.length; i++) {
     table +=
@@ -110,6 +111,10 @@ function myFunction(xml) {
       "<img src='" +
       x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
       "' height='100px' width='70px'>" +
+      "</td><td>" +
+      "<button type='button' onclick='alert('hell')'>" +
+      "click me" +
+      "</button>" +
       "</td></tr>";
   }
   document.getElementById("result").innerHTML = table;
