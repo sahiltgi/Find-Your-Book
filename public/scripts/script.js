@@ -112,7 +112,7 @@ function myFunction(xml) {
       x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
       "' height='100px' width='70px'>" +
       "</td><td>" +
-      "<button type='button' id='Rate-Book' onclick='openModal()'>" +
+      "<button type='button' onclick='openModal()'>" +
       "Ratings" +
       "</button>" +
       "</td></tr>";
@@ -123,13 +123,13 @@ function myFunction(xml) {
 function openModal() {
   var modal = document.getElementById("Book-Rating-modal");
 
-  var btn = document.getElementById("Rate-Book");
+  // var btn = document.getElementById("Rate-Book");
 
   var close = document.getElementsByClassName("close")[0];
 
-  btn.onclick = function() {
-    modal.style.display = "block";
-  };
+  // btn.onclick = function() {
+  modal.style.display = "block";
+  // };
 
   close.onclick = function() {
     modal.style.display = "none";
