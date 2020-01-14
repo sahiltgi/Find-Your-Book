@@ -86,12 +86,6 @@ function find() {
     url + apikey + "&" + "q=" + author + "&" + "q=" + book,
     true
   );
-  // xmlhttp.headers("Access-Control-Allow-Origin", "*");
-  // xmlhttp.headers("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
-  // xmlhttp.headers(
-  //   "Access-Control-Allow-Headers",
-  //   "Origin, X-Requested-With, Content-Type, Accept"
-  // );
   xmlhttp.send();
 }
 
@@ -123,13 +117,9 @@ function myFunction(xml) {
 function openModal() {
   var modal = document.getElementById("Book-Rating-modal");
 
-  // var btn = document.getElementById("Rate-Book");
-
   var close = document.getElementsByClassName("close")[0];
 
-  // btn.onclick = function() {
   modal.style.display = "block";
-  // };
 
   close.onclick = function() {
     modal.style.display = "none";
