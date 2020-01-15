@@ -114,7 +114,7 @@ function myFunction(xml) {
   document.getElementById("result").innerHTML = table;
 }
 
-function openModal() {
+async function openModal() {
   var modal = document.getElementById("Book-Rating-modal");
 
   var close = document.getElementsByClassName("close")[0];
@@ -130,4 +130,10 @@ function openModal() {
       modal.style.display = "none";
     }
   };
+
+  try{
+    
+  }
 }
+
+// async function rating() {}

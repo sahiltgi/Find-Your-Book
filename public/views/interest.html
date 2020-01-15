@@ -131,9 +131,9 @@
           <form id="transactionForm" target="_blank">
             <fieldset>
               <legend><span class="number">1</span>Book Rating</legend>
-              <input type="text" name="author" placeholder="author" />
+              <input type="text" name="author" placeholder="author" disabled />
               <br />
-              <input type="text" name="book" placeholder="book" />
+              <input type="text" name="book" placeholder="book" disabled />
             </fieldset>
             <div class="stars" data-rating="1">
               <span class="star">&nbsp;</span>
@@ -147,7 +147,7 @@
         </div>
       </div>
     </div>
-    <script>
+    <!-- <script>
       //initial setup
       document.addEventListener("DOMContentLoaded", function() {
         let stars = document.querySelectorAll(".star");
@@ -180,7 +180,7 @@
         });
         document.querySelector(".stars").setAttribute("data-rating", num);
       }
-    </script>
+    </script> -->
     <script src="https://findyourbook-2020.herokuapp.com/scripts/script.js"></script>
   </body>
 </html>
