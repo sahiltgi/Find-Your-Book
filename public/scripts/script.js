@@ -130,10 +130,6 @@ async function openModal() {
       modal.style.display = "none";
     }
   };
-
-  try{
-    
-  }
 }
 
 // async function rating() {}
