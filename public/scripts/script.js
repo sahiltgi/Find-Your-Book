@@ -106,30 +106,32 @@ function myFunction(xml) {
       x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
       "' height='100px' width='70px'>" +
       "</td><td>" +
-      "<button type='button' onclick='openModal()'>" +
-      "Ratings" +
-      "</button>" +
+      "<div class=''stars data-rating='1'>" +
+      "<span class='star'>&nbsp;</span>" +
+      "<span class='star'>&nbsp;</span>" +
+      "<span class='star'>&nbsp;</span>" +
+      "<span class='star'>&nbsp;</span>" +
+      "<span class='star'>&nbsp;</span>" +
+      "</div>" +
       "</td></tr>";
   }
   document.getElementById("result").innerHTML = table;
 }
 
-async function openModal() {
-  var modal = document.getElementById("Book-Rating-modal");
+// async function openModal() {
+//   var modal = document.getElementById("Book-Rating-modal");
 
-  var close = document.getElementsByClassName("close")[0];
+//   var close = document.getElementsByClassName("close")[0];
 
-  modal.style.display = "block";
+//   modal.style.display = "block";
 
-  close.onclick = function() {
-    modal.style.display = "none";
-  };
+//   close.onclick = function() {
+//     modal.style.display = "none";
+//   };
 
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-}
-
-// async function rating() {}
+//   window.onclick = function(event) {
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+//     }
+//   };
+// }
