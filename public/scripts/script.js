@@ -92,15 +92,17 @@ function find() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
+  var bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+  var authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
   var table =
     "<tr><th>Title</th><th>Author</th><th>Cover Page</th><th>Ratings</th></tr>";
   var x = xmlDoc.getElementsByTagName("best_book");
   for (i = 0; i < x.length; i++) {
     table +=
       "<tr><td>" +
-      x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+      bookname +
       "</td><td>" +
-      x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+      authorname +
       "</td><td>" +
       "<img src='" +
       x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
@@ -112,13 +114,46 @@ function myFunction(xml) {
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
-      "<input type='submit' value='Add Rating' onClick = 'submitRating()'/>" +
+      "<input type='submit' value='Add Rating' onClick = 'submitRating(authorname,bookname)'/>" +
       "</div>" +
       "</td></tr>";
   }
   document.getElementById("result").innerHTML = table;
 }
 
+async function submitRating(authorname, bookname) {
+  try {
+    let boo = "ledger";
+    let auth = "jenish jain";
+    let rat = 5;
+    let data = JSON.stringify({
+      author: auth,
+      book: boo,
+      rating: rat
+    });
+    let res = await fetch(hostUrl + "api/ratings", {
+      method: "POST",
+      body: data,
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    const myJson = res.json();
+    if (res.status == 200) {
+      //console.log('Success:', JSON.stringify(myJson));
+      console.log("the status is " + res.status);
+      window.location =
+        "https://findyourbook-2020.herokuapp.com/views/interest.html";
+    } else {
+      console.log("the status is " + res.status);
+      alert("rating not given");
+    }
+    //const myJson = res.json();
+    //console.log(JSON.stringify(myJson));
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
 // async function openModal() {
 //   var modal = document.getElementById("Book-Rating-modal");
 
