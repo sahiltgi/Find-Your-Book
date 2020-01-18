@@ -120,14 +120,14 @@ function myFunction(xml) {
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
-      "<input type='submit' value='Add Rating' onClick = 'submitRating(authorname,bookname)'/>" +
+      "<input type='submit' value='Add Rating' onClick = 'submitRating()'/>" +
       "</div>" +
       "</td></tr>";
   }
   document.getElementById("result").innerHTML = table;
 }
 
-async function submitRating(authorname, bookname) {
+async function submitRating() {
   try {
     let boo = "ledger";
     let auth = "jenish jain";
