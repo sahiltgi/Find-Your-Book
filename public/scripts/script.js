@@ -98,6 +98,7 @@ function myFunction(xml) {
     "<tr><th>Title</th><th>Author</th><th>Cover Page</th><th>Ratings</th></tr>";
   var x = xmlDoc.getElementsByTagName("best_book");
   console.log("value int x", typeof x);
+  console.log(x[0]);
   for (i = 0; i < x.length; i++) {
     table +=
       "<tr><td>" +
