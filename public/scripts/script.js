@@ -89,7 +89,7 @@ function find() {
   xmlhttp.send();
 }
 
-var shape = function myFunction(xml) {
+function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
   // var bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
@@ -120,17 +120,17 @@ var shape = function myFunction(xml) {
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
-      "<input type='submit' value='Add Rating' onClick = 'submitRating()'/>" +
+      "<input type='submit' value='Add Rating' onClick = 'submitRating(bookname,authorname)'/>" +
       "</div>" +
       "</td></tr>";
   }
   document.getElementById("result").innerHTML = table;
-};
+}
 
-async function submitRating() {
+async function submitRating(bookname, authorname) {
   try {
-    let boo = shape.bookname;
-    let auth = shape.authorname;
+    let boo = bookname;
+    let auth = authorname;
     let rat = 5;
     let data = JSON.stringify({
       author: auth,
