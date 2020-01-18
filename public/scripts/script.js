@@ -89,9 +89,7 @@ function find() {
   xmlhttp.send();
 }
 
-var bookname;
-var authorname;
-async function myFunction(xml) {
+function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
   var table =
@@ -99,8 +97,10 @@ async function myFunction(xml) {
   var x = xmlDoc.getElementsByTagName("best_book");
   console.log("value int x", typeof x);
   for (i = 0; i < x.length; i++) {
-    bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-    authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+    var bookname = x[i].getElementsByTagName("title")[0].childNodes[0]
+      .nodeValue;
+    var authorname = x[i].getElementsByTagName("name")[0].childNodes[0]
+      .nodeValue;
     table +=
       "<tr><td>" +
       bookname +
@@ -125,10 +125,9 @@ async function myFunction(xml) {
 }
 
 async function submitRating() {
-  // myFunction();
   try {
-    let boo = bookname;
-    let auth = authorname;
+    let boo = this.bookname;
+    let auth = this.authorname;
     let rat = 5;
     let data = JSON.stringify({
       author: auth,
@@ -158,7 +157,7 @@ async function submitRating() {
     console.error("Error:", error);
   }
 }
-submitRating();
+
 // async function openModal() {
 //   var modal = document.getElementById("Book-Rating-modal");
 
