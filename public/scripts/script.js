@@ -92,11 +92,12 @@ function find() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  let bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-  let authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+  var bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+  var authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
   var table =
     "<tr><th>Title</th><th>Author</th><th>Cover Page</th><th>Ratings</th></tr>";
   var x = xmlDoc.getElementsByTagName("best_book");
+  console.log("value int x", x);
   for (i = 0; i < x.length; i++) {
     table +=
       "<tr><td>" +
