@@ -96,18 +96,18 @@ function myFunction(xml) {
   // var authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
   var table =
     "<tr><th>Title</th><th>Author</th><th>Cover Page</th><th>Ratings</th></tr>";
-  var y = x[0];
-  y = xmlDoc.getElementsByTagName("best_book");
+  // var y = x[0];
+  x[0] = xmlDoc.getElementsByTagName("best_book");
   console.log("value int x", x);
   for (i = 0; i < x.length; i++) {
     table +=
       "<tr><td>" +
-      y.getElementsByTagName("title")[0].childNodes[0].nodeValue +
+      x[0].getElementsByTagName("title")[0].childNodes[0].nodeValue +
       "</td><td>" +
-      y.getElementsByTagName("name")[0].childNodes[0].nodeValue +
+      x[0].getElementsByTagName("name")[0].childNodes[0].nodeValue +
       "</td><td>" +
       "<img src='" +
-      y.getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
+      x[0].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
       "' height='100px' width='70px'>" +
       "</td><td>" +
       "<div class=''stars data-rating='1'>" +
