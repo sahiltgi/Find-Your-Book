@@ -92,22 +92,21 @@ function find() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  // var bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-  // var authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+  var bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+  var authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
   var table =
     "<tr><th>Title</th><th>Author</th><th>Cover Page</th><th>Ratings</th></tr>";
-  // var y = x[0];
-  x[0] = xmlDoc.getElementsByTagName("best_book");
+  var x = xmlDoc.getElementsByTagName("best_book");
   console.log("value int x", x);
   for (i = 0; i < x.length; i++) {
     table +=
       "<tr><td>" +
-      x[0].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+      bookname +
       "</td><td>" +
-      x[0].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+      authorname +
       "</td><td>" +
       "<img src='" +
-      x[0].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
+      x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
       "' height='100px' width='70px'>" +
       "</td><td>" +
       "<div class=''stars data-rating='1'>" +
