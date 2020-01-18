@@ -125,7 +125,7 @@ function myFunction(xml) {
 }
 
 async function submitRating() {
-  myFunction();
+  // myFunction();
   try {
     let boo = bookname;
     let auth = authorname;
