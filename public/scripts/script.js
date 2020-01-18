@@ -129,8 +129,8 @@ function myFunction(xml) {
 
 async function submitRating() {
   try {
-    let boo = "ledger";
-    let auth = "jenish jain";
+    let boo = bookname;
+    let auth = authorname;
     let rat = 5;
     let data = JSON.stringify({
       author: auth,
