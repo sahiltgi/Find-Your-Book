@@ -111,7 +111,7 @@ function myFunction(xml) {
       x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
       "' height='100px' width='70px'>" +
       "</td><td>" +
-      "<div class=''stars data-rating='1'>" +
+      "<div class='stars' data-rating='1'>" +
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
