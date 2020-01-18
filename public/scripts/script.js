@@ -96,7 +96,8 @@ function myFunction(xml) {
   // var authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
   var table =
     "<tr><th>Title</th><th>Author</th><th>Cover Page</th><th>Ratings</th></tr>";
-  var x = xmlDoc.getElementsByTagName("best_book");
+  var y = x[0];
+  y = xmlDoc.getElementsByTagName("best_book");
   console.log("value int x", x);
   for (i = 0; i < x.length; i++) {
     table +=
