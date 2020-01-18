@@ -102,12 +102,12 @@ function myFunction(xml) {
   for (i = 0; i < x.length; i++) {
     table +=
       "<tr><td>" +
-      x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+      y.getElementsByTagName("title")[0].childNodes[0].nodeValue +
       "</td><td>" +
-      x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+      y.getElementsByTagName("name")[0].childNodes[0].nodeValue +
       "</td><td>" +
       "<img src='" +
-      x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
+      y.getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
       "' height='100px' width='70px'>" +
       "</td><td>" +
       "<div class=''stars data-rating='1'>" +
