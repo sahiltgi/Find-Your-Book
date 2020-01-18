@@ -100,15 +100,15 @@ function myFunction(xml) {
   console.log("value int x", typeof x);
   // console.log(x[0]);
   for (i = 0; i < x.length; i++) {
+    var bookname = x[i].getElementsByTagName("title")[0].childNodes[0]
+      .nodeValue;
+    var authorname = x[i].getElementsByTagName("name")[0].childNodes[0]
+      .nodeValue;
     table +=
       "<tr><td>" +
-      console.log(
-        x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue
-      ) +
+      bookname +
       "</td><td>" +
-      console.log(
-        x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue
-      ) +
+      authorname +
       "</td><td>" +
       "<img src='" +
       x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
