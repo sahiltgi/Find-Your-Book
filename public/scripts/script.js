@@ -95,7 +95,6 @@ function myFunction(xml) {
   var table =
     "<tr><th>Title</th><th>Author</th><th>Cover Page</th><th>Ratings</th></tr>";
   var x = xmlDoc.getElementsByTagName("best_book");
-  console.log("value int x", typeof x);
   for (i = 0; i < x.length; i++) {
     var bookname = x[i].getElementsByTagName("title")[0].childNodes[0]
       .nodeValue;
@@ -124,12 +123,12 @@ function myFunction(xml) {
   document.getElementById("result").innerHTML = table;
 }
 
-async function submitRating() {
+async function submitRating(bookname, authorname) {
   try {
-    let boo = this.bookname;
+    let boo = bookname;
     console.log("boo val:- ", boo);
     console.log("bookname:- ", bookname);
-    let auth = this.authorname;
+    let auth = authorname;
     console.log("auth val:- ", auth);
     console.log("authorname:- ", authorname);
     let rat = 5;
