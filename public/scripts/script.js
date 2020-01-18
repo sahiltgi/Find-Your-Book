@@ -126,8 +126,8 @@ function myFunction(xml) {
 
 async function submitRating() {
   try {
-    let boo = this.bookname;
-    let auth = this.authorname;
+    let boo = bookname;
+    let auth = authorname;
     let rat = 5;
     let data = JSON.stringify({
       author: auth,
@@ -157,6 +157,7 @@ async function submitRating() {
     console.error("Error:", error);
   }
 }
+
 // async function openModal() {
 //   var modal = document.getElementById("Book-Rating-modal");
 
