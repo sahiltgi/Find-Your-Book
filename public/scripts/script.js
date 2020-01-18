@@ -112,11 +112,11 @@ function myFunction(xml) {
       "' height='100px' width='70px'>" +
       "</td><td>" +
       "<div class=''stars data-rating='1'>" +
-      // "<span class='star'>&nbsp;</span>" +
-      // "<span class='star'>&nbsp;</span>" +
-      // "<span class='star'>&nbsp;</span>" +
-      // "<span class='star'>&nbsp;</span>" +
-      // "<span class='star'>&nbsp;</span>" +
+      "<span class='star'>&nbsp;</span>" +
+      "<span class='star'>&nbsp;</span>" +
+      "<span class='star'>&nbsp;</span>" +
+      "<span class='star'>&nbsp;</span>" +
+      "<span class='star'>&nbsp;</span>" +
       "<input type='submit' value='Add Rating' onClick = 'submitRating()'/>" +
       "</div>" +
       "</td></tr>";
@@ -138,7 +138,7 @@ async function submitRating() {
       method: "POST",
       body: data,
       headers: {
-        "Content-Type": "application/xml"
+        "Content-Type": "application/json"
       }
     });
     const myJson = res.json();
