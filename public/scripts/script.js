@@ -124,40 +124,68 @@ function myFunction(xml) {
   document.getElementById("result").innerHTML = table;
 }
 
-async function submitRating() {
-  try {
-    let boo = this.bookname;
-    let auth = this.authorname;
-    let rat = 5;
-    let data = JSON.stringify({
-      author: auth,
-      book: boo,
-      rating: rat
-    });
-    let res = await fetch(hostUrl + "api/ratings", {
-      method: "POST",
-      body: data,
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-    const myJson = res.json();
-    if (res.status == 200) {
-      //console.log('Success:', JSON.stringify(myJson));
-      console.log("the status is " + res.status);
-      window.location =
-        "https://findyourbook-2020.herokuapp.com/views/interest.html";
-    } else {
-      console.log("the status is " + res.status);
-      alert("rating not given");
-    }
-    //const myJson = res.json();
-    //console.log(JSON.stringify(myJson));
-  } catch (error) {
-    console.error("Error:", error);
-  }
-}
+// async function submitRating() {
+//   try {
+//     let boo = this.bookname;
+//     let auth = this.authorname;
+//     let rat = 5;
+//     let data = JSON.stringify({
+//       author: auth,
+//       book: boo,
+//       rating: rat
+//     });
+//     let res = await fetch(hostUrl + "api/ratings", {
+//       method: "POST",
+//       body: data,
+//       headers: {
+//         "Content-Type": "application/json"
+//       }
+//     });
+//     const myJson = res.json();
+//     if (res.status == 200) {
+//       console.log("the status is " + res.status);
+//       window.location =
+//         "https://findyourbook-2020.herokuapp.com/views/interest.html";
+//     } else {
+//       console.log("the status is " + res.status);
+//       alert("rating not given");
+//     }
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
+// }
 
+document.addEventListener("DOMContentLoaded", function() {
+  let stars = document.querySelectorAll(".star");
+  stars.forEach(function(star) {
+    star.addEventListener("click", setRating);
+  });
+
+  let rating = parseInt(
+    document.querySelector(".stars").getAttribute("data-rating")
+  );
+  let target = stars[rating - 1];
+  target.dispatchEvent(new MouseEvent("click"));
+});
+function setRating(ev) {
+  let span = ev.currentTarget;
+  let stars = document.querySelectorAll(".star");
+  let match = false;
+  let num = 0;
+  stars.forEach(function(star, index) {
+    if (match) {
+      star.classList.remove("rated");
+    } else {
+      star.classList.add("rated");
+    }
+    //are we currently looking at the span that was clicked
+    if (star === span) {
+      match = true;
+      num = index + 1;
+    }
+  });
+  document.querySelector(".stars").setAttribute("data-rating", num);
+}
 // async function openModal() {
 //   var modal = document.getElementById("Book-Rating-modal");
 
