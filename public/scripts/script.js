@@ -89,7 +89,7 @@ function find() {
   xmlhttp.send();
 }
 
-function myFunction(xml) {
+var shape = function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
   // var bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
@@ -125,12 +125,12 @@ function myFunction(xml) {
       "</td></tr>";
   }
   document.getElementById("result").innerHTML = table;
-}
+};
 
 async function submitRating() {
   try {
-    let boo = bookname;
-    let auth = authorname;
+    let boo = shape.bookname;
+    let auth = shape.authorname;
     let rat = 5;
     let data = JSON.stringify({
       author: auth,
