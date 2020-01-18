@@ -91,7 +91,7 @@ function find() {
 
 var bookname;
 var authorname;
-function myFunction(xml) {
+async function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
   var table =
