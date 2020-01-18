@@ -92,8 +92,8 @@ function find() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  var bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-  var authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+  // var bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+  // var authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
   var table =
     "<tr><th>Title</th><th>Author</th><th>Cover Page</th><th>Ratings</th></tr>";
   var x = xmlDoc.getElementsByTagName("best_book");
@@ -101,9 +101,9 @@ function myFunction(xml) {
   for (i = 0; i < x.length; i++) {
     table +=
       "<tr><td>" +
-      bookname +
+      x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
       "</td><td>" +
-      authorname +
+      x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
       "</td><td>" +
       "<img src='" +
       x[i].getElementsByTagName("image_url")[0].childNodes[0].nodeValue +
