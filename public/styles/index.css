@@ -3,7 +3,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
 body {
   background: linear-gradient(110deg, #1b1b1b 50%, #323232 50%);
-  height: 100%;
+  height: 100vh;
 }
 
 body {
