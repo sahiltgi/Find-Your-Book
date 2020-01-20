@@ -32,82 +32,125 @@
     <title>Find Your Book</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a
-        class="navbar-brand"
-        href="#"
-        style="font-family: Arial, Helvetica, sans-serif;"
-        ><strong>FIND YOUR BOOK</strong></a
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a href="#" class="navbar-brand">
+        <img src="./logo.JPG" height="28" alt="book FINDER" />
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
       >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="#" class="nav-item nav-link active">Home</a>
+          <a href="#" class="nav-item nav-link">Profile</a>
+          <a href="#" class="nav-item nav-link">Messages</a>
+          <a href="#" class="nav-item nav-link disabled" tabindex="-1"
+            >Reports</a
+          >
+        </div>
+        <div class="navbar-nav ml-auto">
+          <a href="#" class="nav-item nav-link">Login</a>
+        </div>
+      </div>
     </nav>
-    <div class="bg">
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-          <div class="panel-group" style="padding-top: 12px;">
-            <div class="panel panel-primary">
-              <div class="panel-heading"><h3>Register Here</h3></div>
-              <div class="panel-body">
-                <form action="" method="POST">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      placeholder="User Name"
-                      class="form-control"
-                      id="username"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      class="form-control"
-                      id="email"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="password"
-                      placeholder="Enter Password"
-                      class="form-control"
-                      id="password"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="password"
-                      placeholder="Enter Password Confirmation"
-                      class="form-control"
-                      id="passwordconf"
-                    />
-                  </div>
-                  <div class="checkbox">
-                    <label
-                      ><input
-                        type="checkbox"
-                        onchange="document.getElementById('register_button').disabled = !this.checked;"
-                      />
-                      I agree to all the terms and conditions.</label
-                    >
-                  </div>
-                  <button
-                    type="button"
-                    id="register_button"
-                    onclick="registration();"
-                    disabled="true"
-                    class="btn btn-outline-success my-2 my-sm-0"
-                  >
-                    SignUp
-                  </button>
-                </form>
-                <p>
-                  Already have an account. <a href="https://findyourbook-2020.herokuapp.com/views/login.html">Login here!</a>
-                </p>
+    <div class="row">
+      <div class="img-token col-md-5">
+        <div class="row">
+          <img
+            src="./logo.JPG"
+            style="height: 50px;width: 50px;border-radius: 50px;margin-right: 7px;"
+            class="rounded"
+          />
+          <h1 style="color: antiquewhite;">book FINDER</h1>
+        </div>
+        <br />
+        <img src="./token.jpg" alt="..." class="img-thumbnail rounded" />
+
+        <br /><br />
+        <h4 style="color: antiquewhite;">
+          The Online Service for Finding Books !!!
+        </h4>
+        <h6 style="color: antiquewhite;">
+          We offer a wide variety of Books database for searching the books
+          according to your favorite Author.
+        </h6>
+        <blockquote>
+          <p><strong> So many books, so little time.</strong></p>
+          <footer style="text-align: right;color: antiquewhite">
+            —Frank Zappa
+          </footer>
+        </blockquote>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-4 mb-4">
+        <div class="card" style="margin-top: 15px;">
+          <div class="card-body">
+            <!-- Form register -->
+            <form action="" method="POST">
+              <h2 class="text-center font-up font-bold deep-orange-text py-4">
+                Sign up
+              </h2>
+              <div class="md-form">
+                <i class="fa fa-user prefix grey-text"></i>
+                <input type="text" id="orangeForm-name3 username
+                class="form-control" placeholder="username" />
               </div>
-            </div>
+              <div class="md-form">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <input
+                  type="email"
+                  id="orangeForm-email3 email"
+                  class="form-control"
+                  placeholder="email"
+                />
+              </div>
+              <div class="md-form">
+                <i class="fa fa-lock prefix grey-text"></i>
+                <input type="password" id="orangeForm-pass3 password
+                class="form-control" placeholder="password" />
+              </div>
+              <div class="md-form">
+                <i class="fa fa-lock prefix grey-text"></i>
+                <input
+                  type="password"
+                  id="orangeForm-pass3 passwordconf"
+                  class="form-control"
+                  placeholder="confirm password"
+                />
+              </div>
+              <div class="checkbox">
+                <label
+                  ><input
+                    type="checkbox"
+                    onchange="document.getElementById('register_button').disabled = !this.checked;"
+                  />
+                  I agree to all the terms and conditions.</label
+                >
+              </div>
+              <div class="text-center">
+                <button
+                  class="btn btn-deep-orange"
+                  type="button"
+                  id="register_button"
+                  onclick="registration()"
+                  disabled="true"
+                >
+                  next<i
+                    class="fa fa-angle-double-right pl-2"
+                    aria-hidden="true"
+                  ></i>
+                </button>
+              </div>
+            </form>
+            <!-- Form register -->
           </div>
         </div>
-        <div class="col-md-6"></div>
       </div>
     </div>
   </body>

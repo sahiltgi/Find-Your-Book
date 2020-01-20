@@ -7,15 +7,13 @@ const DB_URI =
   "mongodb+srv://sahil00:sahil123@cluster1-f6fqs.mongodb.net/test?retryWrites=true&w=majority";
 
 const app = express();
-// const HOSTNAME = "127.0.0.1";
-// const PORT = 80;
 const port = process.env.PORT || 3000;
 app.use(express.static("public"));
 
 //use sessions for tracking logins
 app.use(
   session({
-    secret: "work hard",
+    secret: "g36sf465b4fs6b84s364af368g4fb",
     resave: true,
     saveUninitialized: false
   })
