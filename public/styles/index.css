@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Amarante|Libre+Baskerville|Noto+Serif&display=swap");
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css");
 body {
   background: linear-gradient(110deg, #1b1b1b 50%, #323232 50%);
   height: 100vh;
