@@ -128,12 +128,14 @@ console.log("bookname:- ", bookname);
 console.log("authorname:- ", authorname);
 async function submitRating(bookname1, authorname1) {
   try {
-    bookname = $(this)
+    var bookname = $(this)
       .closest("tr")
-      .find(".book");
-    authorname = $(this)
+      .find(".book")
+      .text();
+    var authorname = $(this)
       .closest("tr")
-      .find(".author");
+      .find(".author")
+      .text();
     let boo = bookname;
     console.log("boo val:- ", boo);
     console.log("bookname:- ", bookname);
