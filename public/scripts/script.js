@@ -126,7 +126,7 @@ function myFunction(xml) {
 
 console.log("bookname:- ", bookname);
 console.log("authorname:- ", authorname);
-async function submitRating(bookname1, authorname) {
+async function submitRating(bookname1, authorname1) {
   try {
     let boo = bookname;
     console.log("boo val:- ", boo);
