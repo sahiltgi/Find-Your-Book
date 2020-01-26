@@ -116,7 +116,11 @@ function myFunction(xml) {
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
-      "<input type='button' value='Add Rating' onClick = 'submitRating(this)'>" +
+      "<input type='button' value='Add Rating' onClick = 'submitRating(" +
+      bookname +
+      ", " +
+      authorname +
+      ")'>" +
       "</div>" +
       "</td></tr>";
   }
@@ -126,17 +130,17 @@ function myFunction(xml) {
 
 console.log("bookname:- ", bookname);
 console.log("authorname:- ", authorname);
-async function submitRating(element) {
+async function submitRating(bookname, authorname) {
   try {
-    var xx = $(this).html();
-    var bookname = $(this)
-      .closest("tr")
-      .find("td:eq(0)")
-      .html();
-    var authorname = $(this)
-      .closest("tr")
-      .find(".author")
-      .html();
+    // var xx = $(this).html();
+    // var bookname = $(this)
+    //   .closest("tr")
+    //   .find("td:eq(0)")
+    //   .html();
+    // var authorname = $(this)
+    //   .closest("tr")
+    //   .find(".author")
+    //   .html();
     let boo = bookname;
     console.log("boo val:- ", boo);
     console.log("bookname:- ", bookname);

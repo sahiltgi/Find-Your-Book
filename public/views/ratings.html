@@ -39,7 +39,8 @@
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <style>
       .star {
         color: goldenrod;
@@ -85,7 +86,7 @@
       document.addEventListener("DOMContentLoaded", function() {
         let stars = document.querySelectorAll(".star");
         stars.forEach(function(star) {
-          star.addEventListener("click", setRating);
+          // star.addEventListener("click", setRating);
         });
 
         let rating = parseInt(
