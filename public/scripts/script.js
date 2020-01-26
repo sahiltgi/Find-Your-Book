@@ -131,11 +131,11 @@ async function submitRating(bookname1, authorname1) {
     var bookname = $(this)
       .closest("tr")
       .find(".book")
-      .text();
+      .val();
     var authorname = $(this)
       .closest("tr")
       .find(".author")
-      .text();
+      .val();
     let boo = bookname;
     console.log("boo val:- ", boo);
     console.log("bookname:- ", bookname);
