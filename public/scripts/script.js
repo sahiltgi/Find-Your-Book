@@ -116,7 +116,7 @@ function myFunction(xml) {
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
-      "<input type='submit' value='Add Rating' onClick = 'submitRating()'/>" +
+      "<input type='submit' value='Add Rating' onClick = 'submitRating(this)'/>" +
       "</div>" +
       "</td></tr>";
   }
@@ -126,7 +126,7 @@ function myFunction(xml) {
 
 console.log("bookname:- ", bookname);
 console.log("authorname:- ", authorname);
-async function submitRating(bookname1, authorname1) {
+async function submitRating(element) {
   try {
     var bookname = $(this)
       .closest("tr")
