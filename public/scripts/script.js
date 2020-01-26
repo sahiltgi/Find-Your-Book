@@ -101,9 +101,9 @@ function myFunction(xml) {
     bookname = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
     authorname = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
     table +=
-      "<tr><td>" +
+      "<tr><td class='book'>" +
       bookname +
-      "</td><td>" +
+      "</td><td class='author'>" +
       authorname +
       "</td><td>" +
       "<img src='" +
@@ -128,10 +128,18 @@ console.log("bookname:- ", bookname);
 console.log("authorname:- ", authorname);
 async function submitRating(bookname1, authorname1) {
   try {
+    bookname = $(this)
+      .closest("tr")
+      .find(".book")
+      .text();
+    authorname = $(this)
+      .closest("tr")
+      .find(".author")
+      .text();
     let boo = bookname;
     console.log("boo val:- ", boo);
     console.log("bookname:- ", bookname);
-    let auth = "chetan"; // authorname;
+    let auth = authorname;
     console.log("auth val:- ", auth);
     console.log("authorname:- ", authorname);
     let rat = 5;
