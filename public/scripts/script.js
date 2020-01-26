@@ -116,7 +116,7 @@ function myFunction(xml) {
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
-      "<span type='button' value='Add Rating' onClick = 'submitRating(this)'>" +
+      "<span class='btn' value='Add Rating' onClick = 'submitRating(this)'>" +
       "</div>" +
       "</td></tr>";
   }
