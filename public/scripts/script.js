@@ -116,7 +116,7 @@ function myFunction(xml) {
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
       "<span class='star'>&nbsp;</span>" +
-      "<input type='button' value='Add Rating' onClick = 'submitRating(this)'/>" +
+      "<span type='button' value='Add Rating' onClick = 'submitRating(this)'>" +
       "</div>" +
       "</td></tr>";
   }
@@ -128,6 +128,7 @@ console.log("bookname:- ", bookname);
 console.log("authorname:- ", authorname);
 async function submitRating(element) {
   try {
+    var xx = $(this).html();
     var bookname = $(this)
       .closest("tr")
       .find("td:eq(0)")
@@ -166,7 +167,7 @@ async function submitRating(element) {
       alert("rating not given");
     }
   } catch (error) {
-    console.error("Error:", error);
+    console.log("Error:" + error);
   }
 }
 
