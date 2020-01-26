@@ -131,7 +131,7 @@ async function submitRating(bookname1, authorname1) {
     let boo = bookname;
     console.log("boo val:- ", boo);
     console.log("bookname:- ", bookname);
-    let auth = authorname;
+    let auth = "chetan"; // authorname;
     console.log("auth val:- ", auth);
     console.log("authorname:- ", authorname);
     let rat = 5;
