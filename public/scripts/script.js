@@ -148,6 +148,7 @@ async function submitRating(bookname1, authorname1) {
       }
     });
     const myJson = res.json();
+    console.log(myJson);
     if (res.status == 200) {
       console.log("the status is " + res.status);
       window.location =
