@@ -120,6 +120,7 @@ function myFunction(xml) {
       "</div>" +
       "</td></tr>";
   }
+  console.log(bookname);
   document.getElementById("result").innerHTML = table;
 }
 
