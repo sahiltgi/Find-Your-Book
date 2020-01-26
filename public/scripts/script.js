@@ -130,8 +130,8 @@ async function submitRating(bookname1, authorname1) {
   try {
     var bookname = $(this)
       .closest("tr")
-      .find(".book")
-      .val();
+      .find("td:eq(0)")
+      .text();
     var authorname = $(this)
       .closest("tr")
       .find(".author")
@@ -159,8 +159,8 @@ async function submitRating(bookname1, authorname1) {
     console.log(myJson);
     if (res.status == 200) {
       console.log("the status is " + res.status);
-      window.location =
-        "https://findyourbook-2020.herokuapp.com/views/interest.html";
+      // window.location =
+      //   "https://findyourbook-2020.herokuapp.com/views/interest.html";
     } else {
       console.log("the status is " + res.status);
       alert("rating not given");
